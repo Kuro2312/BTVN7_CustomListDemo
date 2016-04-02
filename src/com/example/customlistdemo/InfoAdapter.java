@@ -67,14 +67,6 @@ public class InfoAdapter extends ArrayAdapter
 	   	 holder.textViewName.setId(position);
 	   	 holder.textViewPhone.setId(position);
 	   	 holder.imageView.setId(position);
-	   	     
-	   	 holder.imageView.setOnClickListener(new View.OnClickListener() {
-
-	   		 public void onClick(View v) 
-	   		 {
-
-	   		 }
-         });
 	   	 
 	   	 PersonalInfo info = _items.get(position);
 	   	 

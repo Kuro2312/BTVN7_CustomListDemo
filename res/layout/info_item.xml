@@ -13,7 +13,7 @@
         android:layout_marginLeft="10dip"
         android:layout_marginRight="10dip"
         android:layout_marginTop="5dp"
-        android:clickable="true"
+        android:clickable="false"
         android:focusable="false"/>
 
     <TextView
