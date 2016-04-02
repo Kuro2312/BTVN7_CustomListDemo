@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android"> 
-   
-   <item
-        android:state_focused="true"
-        android:state_selected="false"
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item 
+        android:state_activated="true"
+        android:drawable="@drawable/selected"/>
+    
+    <item
         android:drawable="@android:color/transparent"/>
-
-    <item
-        android:state_selected="true"
-        android:state_focused="false"
-        android:drawable="@android:color/transparent" />
-
-    <item
-        android:state_selected="true"
-        android:drawable="@android:color/transparent" />
-
-    <item android:state_pressed="true"
-        android:state_selected="false"
-        android:drawable="@android:color/transparent" />
-
-    <item
-        android:state_selected="false"
-        android:drawable="@drawable/selected" />
-
-</selector> 
+    
+</selector>

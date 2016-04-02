@@ -23,6 +23,7 @@ public class MainActivity extends Activity {
 	protected ListView _listViewInfo;
 	protected InfoAdapter _infoAdapter;
 	protected ArrayList<PersonalInfo> _data;
+	protected int _lastIndex;
 	
 	// ảnh đại diện
 	protected int[] _profiles = {R.drawable.profile0, R.drawable.profile10, R.drawable.profile2,
@@ -31,7 +32,7 @@ public class MainActivity extends Activity {
 	
 	// họ tên 
 	protected String[] _names = {"Nguyễn Minh Dũng", "Nguyễn Minh Thiện", "Nguyễn Tiến Dũng", "Ngô Đình Duy Quang",
-			"Lê Việt Toàn", "Lê Viết Khang", "Lê Huy Sinh", "Hành Phúc Thế", "Lê Nguyễn Ngọc Hải",
+			"Lê Viết Toàn", "Lê Viết Khang", "Lê Huy Sinh", "Hành Phúc Thế", "Lê Nguyễn Ngọc Hải",
 			"Phan Văn Tân", "Batman"};
 	
 	protected String[] _phones = {"1312094", "1312551", "1312096", "1312458", "Ready To Update", "09086743", "1312486",
@@ -42,6 +43,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		_lastIndex = -1;
 		// Lấy các control cần thiết
 		_textViewChoice = (TextView) findViewById(R.id.textView1);
 		_listViewInfo = (ListView) findViewById(R.id.listView1);
@@ -51,6 +53,11 @@ public class MainActivity extends Activity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 
+            	if (_lastIndex != -1)
+            		_listViewInfo.setItemChecked(_lastIndex, false);
+            	_listViewInfo.setItemChecked(position, true);
+            	_lastIndex = position;
+            	
                 String item = ((ViewHolder)view.getTag()).textViewName.getText().toString();           
                 
                 _textViewChoice.setText("You choose: " + item);
@@ -63,6 +70,7 @@ public class MainActivity extends Activity {
 		// Tùy biến trên ListView
 		_infoAdapter = new InfoAdapter(this, _data);
 		_listViewInfo.setAdapter(_infoAdapter);
+		_listViewInfo.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
 	}
 	
 	// Phương thức để thực hiện việc lấy dữ liệu và nạp vào mảng _data
