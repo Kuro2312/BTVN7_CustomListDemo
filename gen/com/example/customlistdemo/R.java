@@ -22,20 +22,22 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
-        public static final int listselector=0x7f020001;
-        public static final int profile0=0x7f020002;
-        public static final int profile1=0x7f020003;
-        public static final int profile10=0x7f020004;
-        public static final int profile2=0x7f020005;
-        public static final int profile3=0x7f020006;
-        public static final int profile4=0x7f020007;
-        public static final int profile5=0x7f020008;
-        public static final int profile6=0x7f020009;
-        public static final int profile7=0x7f02000a;
-        public static final int profile8=0x7f02000b;
-        public static final int profile9=0x7f02000c;
-        public static final int selected=0x7f02000d;
+        public static final int focused=0x7f020000;
+        public static final int ic_launcher=0x7f020001;
+        public static final int listselector=0x7f020002;
+        public static final int listselector2=0x7f020003;
+        public static final int profile0=0x7f020004;
+        public static final int profile1=0x7f020005;
+        public static final int profile10=0x7f020006;
+        public static final int profile2=0x7f020007;
+        public static final int profile3=0x7f020008;
+        public static final int profile4=0x7f020009;
+        public static final int profile5=0x7f02000a;
+        public static final int profile6=0x7f02000b;
+        public static final int profile7=0x7f02000c;
+        public static final int profile8=0x7f02000d;
+        public static final int profile9=0x7f02000e;
+        public static final int selected=0x7f02000f;
     }
     public static final class id {
         public static final int action_settings=0x7f080007;
